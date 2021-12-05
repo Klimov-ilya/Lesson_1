@@ -247,12 +247,12 @@ namespace Lesson_2 {
 
     /*
         Black jack
-        Минимум:
-            - Должен быть класс самой игры, у которой есть игроки (список игроков), там может быть поле состояния игры, победитель, список карт в машинке, игрок который ходит ...
-            - Класс человека, у которого есть дочерние - диллер и простой игрок, по скольку для диллера и игрока правила рассчета победы считаются по разному
-            - У класса игры есть один диллер и список игроков
-            - У диллера и у игроков есть карты на руке (список карт), количество очков
-            - Класс карты, у которой есть определенный номинал (Либо сделать через перечисление)
+        Minimum:
+            - There should be a class of the game itself, which has players (a list of players), there may be a game state field, a winner, a list of cards in a car, a player who walks ...
+            - The class of a person who has children - a dealer and a simple player, since the rules for calculating a victory are calculated differently for the dealer and the player
+            - The game class has one dealer and a list of players
+            - The dealer and the players have cards in their hand (list of cards), the number of points
+            - The class of the card, which has a certain denomination (Or do it through a transfer)
         
     */
 
