@@ -1,4 +1,4 @@
-п»ї#include <iostream>
+#include <iostream>
 #include <cmath>
 #include <cstdint>
 
@@ -17,14 +17,14 @@ public:
 };
 
 class Date {
-private: 
-    // РџРѕР»СЏ
+private:
+    // Поля
     int day;
     int month;
     const int year;
     Time time;
 public:
-    Date() : day(1), month(2), year(2000) { // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ РјС‹ РјРѕР¶РµРј РґР°Р¶Рµ РѕР±РЅРѕРІРёС‚СЊ РєРѕРЅСЃС‚Р°РЅС‚Сѓ РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ, РјРѕР¶РµРј РёР·РІРЅРµ РїСЂРѕР±СЂРѕСЃРёС‚СЊ РєРѕРЅСЃС‚Р°РЅС‚Сѓ (СЃРїРёСЃРѕРє РёРЅРёС†РёР°Р»РёР·Р°С†РёРё С‡Р»РµРЅРѕРІ РєР»Р°СЃР°)
+    Date() : day(1), month(2), year(2000) { // конструктор по умолчанию, через запятую мы можем даже обновить константу в конструкторе, можем извне пробросить константу (список инициализации членов класа)
         // day = 1;
         // month = 1;
         // year = 2000;
@@ -36,17 +36,17 @@ public:
         // year = y;
     }
 
-    // Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
+    // Деструктор
     ~Date() {
         cout << "destructor" << endl;
     }
 
-    // РњРµС‚РѕРґС‹
+    // Методы
     void toString() {
         cout << day << "." << month << "." << year << endl;
     }
 
-    // РЎРµС‚С‚РµСЂС‹
+    // Сеттеры
     void setDay(int d) {
         day = d;
     }
@@ -59,7 +59,7 @@ public:
     //     year = y;
     // }
 
-    // Р“РµС‚С‚РµСЂС‹
+    // Геттеры
     int getDay() {
         return day;
     }
@@ -75,14 +75,14 @@ public:
 };
 
 void lesson() {
-    // Date today; // РћР±СЉРµРєС‚ || Р­РєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР°
+    // Date today; // Объект || Экземпляр класса
     // today.toString();
     // today.setDay(25);
     // today.setMonth(11);
     // today.setYear(2021);
     // today.toString();
 
-    // РЎРѕР·РґР°РµС‚СЊСЃСЏ РЅР° СЃС‚РµРєРµ, РїРѕСЃР»Рµ РІС‹С…РѕРґР°, С‚Рѕ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РѕС‡РёСЃС‚РёС‚СЃСЏ
+    // Создаеться на стеке, после выхода, то автоматически очистится
     Date today(5, 4, 1996);
     today.toString();
 
@@ -129,7 +129,7 @@ class RGBA {
 private:
     uint8_t m_red, m_green, m_blue, m_alpha;
 
-public: 
+public:
     RGBA() : m_red(0), m_green(0), m_blue(0), m_alpha(255) {}
     RGBA(uint8_t red, int8_t green, int8_t blue, int8_t alpha) : m_red(red), m_green(green), m_blue(blue), m_alpha(alpha) {}
 
@@ -139,7 +139,7 @@ public:
 };
 
 class Stack {
-private: 
+private:
     const size_t SIZE = 10;
     int pArr[10] = { 0 };
     size_t currentIndex = -1;
@@ -183,8 +183,7 @@ public:
 
 };
 
-int main()
-{
+void hometask_1() {
     //Power power;
     Power power(3, 3);
     cout << "result: " << power.calculate() << endl;
@@ -208,7 +207,4 @@ int main()
     stack.pop();
     stack.print();
 
-
-
-    return 0;
 }
